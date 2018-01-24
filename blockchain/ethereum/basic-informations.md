@@ -1,4 +1,4 @@
-#Ethereum Basic Information
+# Ethereum Basic Information
 **Ethereum** is an open-source, public, blockchain-based distributed computing platform featuring smart contract functionality. 
 
 Blockchain starts with **first initial block**. All future blocks contain information about transactions/contracts + **part of signature of previous block**:
@@ -23,7 +23,20 @@ You need to sign data you want to send to blockchain with your private key. Send
 - Ethereum address - derived from the public key
 
 ### Proof of Stake (PoS)
-You need to put in Ether to mine new blocks. It's better for environment (doesn't use a lot of energy).
+You need to put in Ether to mine new blocks. It's better for environment (doesn't use a lot of energy). Possible changing from PoW to PoS/PoW (mixed) in 2018.
+
+### Blockchain Node
+- implements Ethereum protocol,
+- gives access to blockchain,
+- provides ability to, for instance, mining etc.
+
+First nodes written in:
+- **Go** (Geth) - most popular,
+- **C++**,
+- **Python**
+
+### Simulations of the Ethereum protocol
+Tool - **Ethereumjs-TestRPC**. You can use it for unit-testing. Very easy to setup, "mining" is simulated (takes almost no time).
 
 ### Some other facts
 **Distributed Apps (Dapps)** - they assume you have access to blockchain (unlike in traditional client-server model, where app is stored on server-side)
