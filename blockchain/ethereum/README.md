@@ -39,5 +39,9 @@ First nodes written in:
 - **Ethereumjs-TestRPC** 
 - [**Ganache**](http://truffleframework.com/ganache/)
 
+### Plugins to interact with Ethereum network via browser
+#### Metamask
+It's plugin for **Chrome/Firefox**. Acts like a bridge (Your browser -> Metamask's servers -> Ethereum blockchain). Can store private keys and doesn't download chain data.
+
 ### Some other facts
 **Distributed Apps (Dapps)** - they assume you have access to blockchain (unlike in traditional client-server model, where app is stored on server-side)
