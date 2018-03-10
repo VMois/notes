@@ -35,8 +35,9 @@ First nodes written in:
 - **C++**,
 - **Python**
 
-### Simulations of the Ethereum protocol
-Tool - **Ethereumjs-TestRPC**. You can use it for unit-testing. Very easy to setup, "mining" is simulated (takes almost no time).
+### Development tools for simulations of the Ethereum protocol (network)
+- **Ethereumjs-TestRPC** 
+- [**Ganache**](http://truffleframework.com/ganache/)
 
 ### Some other facts
 **Distributed Apps (Dapps)** - they assume you have access to blockchain (unlike in traditional client-server model, where app is stored on server-side)
