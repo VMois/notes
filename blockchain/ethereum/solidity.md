@@ -1,10 +1,14 @@
-# Solidity
-It is programming language for Ethereum blockchain. Features:
+# Solidity Cheatsheet
+It is the programming language for Ethereum blockchain. Features:
 - statically typed
 
 ## Quick overview
+Simple overview of Solidity programming language. References:
+- Cryptozombies (https://cryptozombies.io)
+- Solidity docs (https://solidity.readthedocs.io)
+
 ### Contract
-Fundamental block of Solidity is a **contract**. All functions, variables belong to it.
+The fundamental block of Solidity is a **contract**. All functions, variables belong to it.
 ```javascript
 contract HelloWorld {
 
@@ -12,9 +16,9 @@ contract HelloWorld {
 ```
 
 ### Version pragma
-All Solidity source code should start with "version pragma". It defines what what version of Solidity contract uses.
+All Solidity source code should start with "pragma version" definition. It defines what version of Solidity contract is using.
 ```
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.21;
 
 contract HelloWorld {
 
@@ -36,11 +40,27 @@ contract HelloWorld {
 
 ### Structs
 Structs allow to create more complex data types.
+
+Declaration of struct:
 ```javascript
 struct Person {
     uint age;
     string name;
 }
+```
+Defining your struct variable:
+```javascript
+Person mike = Person(18, "Mike");
+```
+
+Creating array of structs and add value to it:
+```javascript
+Person[] people;
+Person adam = Person(20, "Adam");
+
+people.push(adam)
+// or
+people.push(Person(20, "Adam"));
 ```
 
 ### Arrays
@@ -76,6 +96,15 @@ Person[] public people;
 ```
 Solidity will automatically create *getter* methods, so other contracts could read (but not write) from your public array.
 
+You can add value to **the end of the array** by using `push()` method:
+```javascript
+uint[] numbers;
+numbers.push(2)
+numbers.push(4)
+numbers.push(8)
+// numbers -> [2, 4, 8]
+```
+
 ### Functions
 ```javascript
 function addPerson(string _name, uint _age) {
@@ -84,3 +113,51 @@ function addPerson(string _name, uint _age) {
 ```
 *Note: it's good practice to start name your function parameters with **_** (underscore) to seperate them from global variables*
 
+#### Public/private functions
+By default functions in Solidity are **public**. This means anyone (or any other contract) could execute your code. It is dangerous and could make your contract vulnerable to attacks. So, It is a good practice **to make all your functions private by default** and make public only functions that you want to expose to the world.
+
+Creating a private function:
+```javascript
+function _addPerson(string _name, uint age) private {
+
+}
+```
+Only other functions within your contracts would be able to use this function.
+
+*Note: It's convention to start private function names with an underscore (_)*
+
+#### Return value in functions
+If you want to return value from function, the declaration looks like this:
+```javascript
+string helloWorld = "Hello World";
+
+function sayHelloWorld() public returns (string) {
+  return helloWorld;
+}
+```
+
+#### Function modifiers
+[in future]
+
+### Keccak256
+[in future]
+
+### Events
+**Events** are a way for your contract to communicate that something happened on the blockchain to your app front-end,which can be 'listening' for certain events and take action when they happen.
+
+```javascript
+// declare the event
+event PersonAdded(
+  string _name, 
+  uint _age
+);
+
+
+function addPerson(string _name, uint _age) public {
+  Person newPerson = Person(_age, _name);
+  people.push(newPerson);
+
+  // fire an event to let the app know the function was called:
+  PersonAdded(_name, _age);
+}
+```
