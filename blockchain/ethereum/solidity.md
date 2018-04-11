@@ -174,7 +174,49 @@ mapping(address => uint) public accountsBalance;
 In this example **the key** is an *address*, and  **the value** is a *uint*.
 
 ### Global variables
-Solidity has the certain global variables that are available for all functions. List:
+Solidity has the certain global variables that are available for all functions. Some of popular variables:
 ```javascript
 msg.sender // address of user that called function
+msg.value  // number of wei sent with the message (with function call)
+```
+[Global variables Solidity dics](https://solidity.readthedocs.io/en/v0.4.21/units-and-global-variables.html#block-and-transaction-properties)
+
+### Error handling
+There several built in function to handle errors in Solidity:
+```javascript
+require(bool cond) // throws if the condition is false - to be used for errors in inputs or external components.
+
+assert(bool cond) // throws if the condition is false - to be used for internal errors.
+```
+
+### Contract inheritance
+In Solidity, you can inherit from contracts.
+Example:
+```javascript
+contract Vehicle {
+  function start() public returns (string) {
+    return "Vechicle start";
+  }
+
+  function stop() public returns (string) {
+    return "Vechicle stop";
+  }
+}
+
+contract Car is Vehicle {
+  function playRadio() public returns (string) {
+    return "Car play radio";
+  }
+}
+```
+Car **inherits** from Vehicle. Now Car contract has access to all **public** functions that Vehicle has (e.g start and stop).
+
+### Import
+You can import code to you contact, from another using **import** keyword. Example:
+```javascript
+import "./animalcontract.sol";
+
+contact Car is AnimalContract {
+  
+}
 ```
