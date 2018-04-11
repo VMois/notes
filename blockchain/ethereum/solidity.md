@@ -161,3 +161,20 @@ function addPerson(string _name, uint _age) public {
   PersonAdded(_name, _age);
 }
 ```
+
+### Addresses
+Ethereum is made up of accounts. Each account has an **address**. *An address is owned by specific user or smart contract*.
+
+### Mapping
+Mapping it is simple key -> value storage. Example:
+```javascript
+mapping(address => uint) public accountsBalance;
+```
+
+In this example **the key** is an *address*, and  **the value** is a *uint*.
+
+### Global variables
+Solidity has the certain global variables that are available for all functions. List:
+```javascript
+msg.sender // address of user that called function
+```
