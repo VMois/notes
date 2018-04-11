@@ -217,6 +217,25 @@ You can import code to you contact, from another using **import** keyword. Examp
 import "./animalcontract.sol";
 
 contact Car is AnimalContract {
-  
+
 }
+```
+
+### Storage and memory
+**Storage** - permanent storage on blockchain,
+
+**Memory** - temporary variables
+
+*Note: State variables (variables declared outside of functions) are by default storage. Variables declared inside functions are memory and will disappear when the function call ends.*
+Examples:
+```javascript
+Person storage person = people[0];
+// Now you will get pointer to people[0] in storage so
+person.name = 'New Name';
+// will permanently change name of people[0] to 'New Name'
+
+// if you want only get a copy
+Person memory person = people[0];
+// now any modifications of person wouldn't affect permanent storage. If you want to save (replace) your copy
+people[0] = person;
 ```
