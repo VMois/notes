@@ -126,6 +126,11 @@ Only other functions within your contracts would be able to use this function.
 
 *Note: It's convention to start private function names with an underscore (_)*
 
+#### Internal/External functions
+**Internal** is the same as **private**, except that it's also accessible to contracts that inherit from this contract.
+
+**External** is similar to **public**, except that these functions can **ONLY** be called outside the contract — they can't be called by other functions inside that contract. 
+
 #### Return value in functions
 If you want to return value from function, the declaration looks like this:
 ```javascript
