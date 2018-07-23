@@ -1,5 +1,5 @@
 # Solidity Cheatsheet
-It is the programming language for Ethereum blockchain. Features:
+It is the programming language for **Ethereum** blockchain. Features:
 - statically typed
 
 ## Quick overview
@@ -184,7 +184,7 @@ Solidity has the certain global variables that are available for all functions. 
 msg.sender // address of user that called function
 msg.value  // number of wei sent with the message (with function call)
 ```
-[Global variables Solidity dics](https://solidity.readthedocs.io/en/v0.4.21/units-and-global-variables.html#block-and-transaction-properties)
+[Global variables Solidity docs](https://solidity.readthedocs.io/en/v0.4.21/units-and-global-variables.html#block-and-transaction-properties)
 
 ### Error handling
 There several built in function to handle errors in Solidity:
