@@ -1,5 +1,7 @@
-# Solidity Cheatsheet
-It is the programming language for **Ethereum** blockchain. Features:
+# Solidity
+It is the programming language for **Ethereum** blockchain. 
+
+Features:
 - statically typed
 
 ## Quick overview
