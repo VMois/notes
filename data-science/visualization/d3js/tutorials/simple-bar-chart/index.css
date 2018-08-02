@@ -1,7 +1,9 @@
 .chart div {
 	font: 10px sans-serif;
+	width: 20px;
+	float: left;
 	background-color: steelblue;
-	text-align: right;
+	text-align: center;
 	padding: 3px;
 	margin: 1px;
 	color: white;
