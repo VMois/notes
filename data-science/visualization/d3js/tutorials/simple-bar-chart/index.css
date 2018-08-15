@@ -1,10 +1,25 @@
-.chart div {
+.chart rect {
+	fill: steelblue;
+}
+  
+.chart text {
+	fill: black;
 	font: 10px sans-serif;
-	width: 20px;
-	float: left;
-	background-color: steelblue;
-	text-align: center;
-	padding: 3px;
-	margin: 1px;
-	color: white;
+	text-anchor: middle;
 }  
+
+.chart .bar rect:hover {
+	fill: red;
+	pointer-events: all;
+}
+
+.axis text {
+	font: 10px sans-serif;
+}
+  
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+  
