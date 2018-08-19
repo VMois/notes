@@ -9,6 +9,7 @@ This repo is my collection of notes and learning resources about different IT fi
 5. [System Administration and other OS stuff](sysadm/)
 6. [Journalism](journalism/)
 7. [Data Science](data-science/)
+8. [Computer Science](computer_science/)
 
 ## Contribution
 If you found any mistakes, or simply want to add something, please fork the repo and create pull request. Thanks! :)
