@@ -26,6 +26,12 @@ kubectl describe pod PODNAME -n NAMESPACE
 kubectl delete pod PODNAME
 ```
 
+- Get information about cluster
+
+```bash
+kubectl cluster-info
+```
+
 - Delete and install (Replace) pod:
 
 ```bash
