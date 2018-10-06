@@ -35,3 +35,11 @@
 3. Explore
 4. Draw Conclusions
 5. Communicate
+
+## Machine learning
+
+Types of training:
+
+- Supervised - data is labeled
+- Unsupervised - data without a label
+- Reinforcement - model tries to achive the goal
