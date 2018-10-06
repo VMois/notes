@@ -38,7 +38,13 @@ kubectl cluster-info
 kubectl get pod PODNAME -n NAMESPACE -o yaml | kubectl replace --force -f -
 ```
 
-- Other (place later):
+- Get shell on a pod:
+
+```bash
+kubectl exec -it POD_NAME -- /bin/bash
+```
+
+- Other commands (place later):
 
 ```bash
 kubectl create serviceaccount --namespace kube-system tiller
