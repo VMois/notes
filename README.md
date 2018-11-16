@@ -12,6 +12,7 @@ This repo is a collection of notes and learning resources.
 6. [Data journalism](data-journalism/)
 7. [Big data](big-data/)
 8. [Computer Science](computer_science/)
+9. [Physics](physics/)
 
 ## Contribution
 
