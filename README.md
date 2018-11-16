@@ -1,6 +1,6 @@
-# Personal notes
+# Collection of notes and learning resources
 
-This repo is my collection of notes and learning resources about different IT fields. This collection is only for educational purpose.
+This repo is a collection of notes and learning resources.
 
 ## Table of Contents
 
@@ -9,8 +9,8 @@ This repo is my collection of notes and learning resources about different IT fi
 3. [Computer Security](security/)
 4. [Programming](programming/)
 5. [SysAdm/DevOps](sysadm/)
-6. [Data journalism](journalism/)
-7. [Data Science](data-science/)
+6. [Data journalism](data-journalism/)
+7. [Big data](big-data/)
 8. [Computer Science](computer_science/)
 
 ## Contribution
