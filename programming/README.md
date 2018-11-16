@@ -1,13 +1,14 @@
 # Programming
 
-This section represents, some of my notes on different programming languages.
+Collection of notes and resources about programming.
 
 ## Table of Contents
 
 1. [C++](c++/)
 2. [Solidity](solidity/)
 3. [Haskell](haskell/)
+4. [SQL](sql/)
 
-## Resources
+## Other
 
 - [Udacity Git Commit guide](https://udacity.github.io/git-styleguide/)
