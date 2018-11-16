@@ -1,54 +1,57 @@
-# Kubernetes Overview
+# Kubernetes
 
-## Kubernetes cheatsheet
+## Useful commands
 
-- Get all pods:
+1. [Get all pods](#get-pods)
+2. [Get all services](#get-services)
+3. [Describe pod](#describe-pod)
+4. [Delete pod](#delete-pod)
+5. [Get cluster information](#get-cluster-information)
+6. [Recreate pod](#recreate-pod)
+7. [Get shell on a pod](#get-shell-on-a-pod)
+
+### Get pods
 
 ```bash
 kubectl get pods -n NAMESPACE
 ```
 
-- Get all services:
+### Get services
 
 ```bash
 kubectl get services
 ```
 
-- Describe pod:
+### Describe pod
 
 ```bash
 kubectl describe pod PODNAME -n NAMESPACE
 ```
 
-- Delete pod:
+### Delete pod
 
 ```bash
 kubectl delete pod PODNAME
 ```
 
-- Get information about cluster
+### Get cluster information
 
 ```bash
 kubectl cluster-info
 ```
 
-- Delete and install (Replace) pod:
+### Recreate pod
+
+Delete and install (replace) pod
 
 ```bash
 kubectl get pod PODNAME -n NAMESPACE -o yaml | kubectl replace --force -f -
 ```
 
-- Get shell on a pod:
+### Get shell on a pod
 
 ```bash
 kubectl exec -it POD_NAME -- /bin/bash
-```
-
-- Other commands (place later):
-
-```bash
-kubectl create serviceaccount --namespace kube-system tiller
-kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
 ```
 
 ## Helm
@@ -57,7 +60,7 @@ Hepls manage Kubernetes applications.
 
 Official website: https://www.helm.sh
 
-### Helm cheatsheet
+### Useful Helm commands
 
 - Init helm:
 
