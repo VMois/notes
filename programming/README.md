@@ -9,6 +9,7 @@ Collection of notes and resources about programming.
 3. [Haskell](haskell/)
 4. [SQL](sql/)
 5. [Git](git/)
+6. [Python](python/)
 
 ## Other
 
