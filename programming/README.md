@@ -8,6 +8,7 @@ Collection of notes and resources about programming.
 2. [Solidity](solidity/)
 3. [Haskell](haskell/)
 4. [SQL](sql/)
+5. [Git](git/)
 
 ## Other
 
