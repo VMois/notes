@@ -1,4 +1,6 @@
-# Pandas Overview
+# Pandas
+
+Software library for data manipulation and analysis written in Python.
 
 ## Data Structures
 
