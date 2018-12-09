@@ -1,5 +1,7 @@
 # Big Data
 
+Section about data manipulation, analysis, visualization, processing, machine learning etc.
+
 Table of contents
 
 1. [Data processing](processing/)

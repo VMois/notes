@@ -79,3 +79,9 @@ helm install chart-dir/ --name RELEASE_NAME
 ```bash
 helm repo update
 ```
+
+- Upgrade chart
+
+```bash
+helm upgrade -f [values_filename].yaml RELEASE_NAME ./chart-dir
+```

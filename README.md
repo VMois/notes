@@ -13,6 +13,7 @@ This repo is a collection of notes and learning resources.
 7. [Big data](big-data/)
 8. [Computer Science](computer_science/)
 9. [Physics](physics/)
+10. [Business](business/)
 
 ## Contribution
 
