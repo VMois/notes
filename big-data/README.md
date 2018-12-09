@@ -9,7 +9,8 @@ Table of contents
 3. [Data visualization](visualization/)
 4. [Machine Learning](ml/)
 5. [Tools](tools/)
-6. [Definitions](#definitions)
+6. [Datasets](datasets/)
+7. [Definitions](#definitions)
 
 ## Definitions
 
