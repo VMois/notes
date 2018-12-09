@@ -1,5 +1,9 @@
 # Machine learning
 
+## Table of contents
+
+1. [Neural Networks](nn/)
+
 Types of ML training:
 
 - Supervised - data is labeled
