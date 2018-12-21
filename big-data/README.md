@@ -12,6 +12,10 @@ Table of contents
 6. [Datasets](datasets/)
 7. [Definitions](#definitions)
 
+## Resources
+
+- [Awesome Data Engineering list](https://github.com/igorbarinov/awesome-data-engineering#readme)
+
 ## Definitions
 
 - **3V** - Volume, Variety, Velocity
