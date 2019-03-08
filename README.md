@@ -1,18 +1,19 @@
-# Collection of notes and learning resources
+# Notes
 
-This repo is a collection of notes and learning resources.
+This repo is a collection of notes and learning resources. Nothing more, nothing less :)
 
 ## Table of Contents
 
-1. [Blockchain](blockchain/)
-2. [Cryptography](cryptography/)
-3. [Computer Security](security/)
-4. [Programming](programming/)
-5. [SysAdm/DevOps](sysadm/)
-6. [Data journalism](data-journalism/)
-7. [Big data](big-data/)
-8. [Computer Science](computer_science/)
-9. [Physics](physics/)
+1. [Databases](databases/)
+2. [Machine learning](machine_learning/)
+3. [Blockchain](blockchain/)
+4. [Security](security/)
+5. [Programming](programming/)
+6. [SysAdm/DevOps](sysadm/)
+7. [Academic](academic/)
+8. [Data journalism](data_journalism/)
+9. [Big data](big_data/)
+10. [Computer Science](computer_science/)
 
 ## Contribution
 

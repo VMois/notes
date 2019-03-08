@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-1. [Neural Networks](nn/)
+1. [Neural Networks](neural_networks/)
 
 ## Types of ML training
 
