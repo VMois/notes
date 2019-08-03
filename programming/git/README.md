@@ -1,6 +1,6 @@
 # Git
 
-A version-control system
+A version-control system.
 
 ## Useful commands
 
@@ -19,3 +19,7 @@ If change already pushed and you have overwrite permissions (rebase):
 ```bash
 git push origin master --force
 ```
+
+## Other
+
+- [Udacity Git Commit guide](https://udacity.github.io/git-styleguide/)

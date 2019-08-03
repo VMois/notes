@@ -4,16 +4,16 @@ This repo is a collection of notes and learning resources. Nothing more, nothing
 
 ## Table of Contents
 
-1. [Databases](databases/)
-2. [Machine learning](machine_learning/)
+1. [Machine learning](machine_learning/)
+2. [Programming](programming/)
 3. [Blockchain](blockchain/)
 4. [Security](security/)
-5. [Programming](programming/)
-6. [SysAdm/DevOps](sysadm/)
-7. [Academic](academic/)
-8. [Data journalism](data_journalism/)
-9. [Big data](big_data/)
-10. [Computer Science](computer_science/)
+5. [SysAdm/DevOps](sysadm/)
+6. [Academic](academic/)
+7. [Data journalism](data_journalism/)
+8. [Big data](big_data/)
+9. [Computer Science](computer_science/)
+10. [Quantum Computing](quantum_computing/)
 
 ## Contribution
 

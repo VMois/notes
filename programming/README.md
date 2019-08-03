@@ -15,7 +15,3 @@ Collection of notes and resources about programming.
 ## General programming tips
 
 1. When you open the connection (file, database etc.), start thinking about how you will close it.
-
-## Other
-
-- [Udacity Git Commit guide](https://udacity.github.io/git-styleguide/)
