@@ -42,7 +42,7 @@ After you measure a qubit and found one of the states (|0> or |1>) it will forev
 
 NOT gate -> X gate (in quantum computer)
 
-Quantum gate called **H** designed to prepare a superposition state:
+Quantum gate called **H** (Hadamard gate) designed to prepare a superposition state:
 
 ```
 |0> -> H -> |0> + |1> 
@@ -65,3 +65,4 @@ Later...
 ## Learning resources
 
 [Brilliant](https://brilliant.org)
+[Quantum Computing for Computer Scientists (Microsoft Research)](https://www.youtube.com/watch?v=F_Riqjdh2oM&list=WL&index=3&t=0s)
