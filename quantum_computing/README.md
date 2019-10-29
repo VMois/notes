@@ -9,7 +9,6 @@ Quantum computer operates on **qubits**.
 Quotes from Briliant:
 
 > In a real sense, quantum computers do not compute at all, but simply carry on according to the laws of physics. The extent to which quantum computing can revolutionize computation depends on our finding ways to restate computational problems in equivalent quantum systems.
-
 > Suppose we create a shape out of wire, dip it into a bath of soapy water, lift it out, and allow things to settle down. This complex calculation is performed in **real time** by the laws of physics, while it takes **several seconds** even on a powerful modern computer using a non-linear solver.
 
 ## Galton board game

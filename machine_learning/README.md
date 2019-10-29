@@ -22,3 +22,7 @@
 
 - **instance-based** - system is learning by heart, and later predicts new data using similiraty measure compare to learned data.
 - **model-based** - system builds a general model from learned examples (like linear), and later predicts new data using chosen model.
+
+## Resources
+
+- [course fast.ai](https://course.fast.ai)
