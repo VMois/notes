@@ -11,6 +11,12 @@ Quotes from Briliant:
 > In a real sense, quantum computers do not compute at all, but simply carry on according to the laws of physics. The extent to which quantum computing can revolutionize computation depends on our finding ways to restate computational problems in equivalent quantum systems.
 > Suppose we create a shape out of wire, dip it into a bath of soapy water, lift it out, and allow things to settle down. This complex calculation is performed in **real time** by the laws of physics, while it takes **several seconds** even on a powerful modern computer using a non-linear solver.
 
+## Resources
+
+[Brilliant](https://brilliant.org)
+[Quantum Computing for Computer Scientists (Microsoft Research)](https://www.youtube.com/watch?v=F_Riqjdh2oM&list=WL&index=3&t=0s)
+[Quantum country](https://quantum.country/qcvc)
+
 ## Galton board game
 
 Another names Pachinko (Jap.) or Plinko (Eng.). Interesting game to explain difference between classical and quantum computer. Instead of balls, let's use photons. Photons can interfere with each other (cancel or add). More later...
@@ -60,8 +66,3 @@ Another property of H gate:
 ## Quantum parallelism
 
 Later...
-
-## Learning resources
-
-[Brilliant](https://brilliant.org)
-[Quantum Computing for Computer Scientists (Microsoft Research)](https://www.youtube.com/watch?v=F_Riqjdh2oM&list=WL&index=3&t=0s)
