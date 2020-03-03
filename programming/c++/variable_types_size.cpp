@@ -1,7 +1,8 @@
-#include <iostream>  // preprocessor with brackets
+#include <iostream> 
 
 using namespace std;
-int main()
+
+int main() 
 {
     cout << "Variable type size in bytes:" << endl;
     cout << "Int: " << sizeof(int) << endl;
