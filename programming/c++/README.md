@@ -9,6 +9,12 @@ Each C++ program consist of two parts:
 - the preprocessor directives (starts with *#*)
 - main function
 
+## Style guide
+
+The most simple to follow is [Modern C++ stylyguide](https://github.com/Microsoft/AirSim/blob/master/docs/coding_guidelines.md). Other, more complex:
+
+- [Google C++ styleguide](https://google.github.io/styleguide/cppguide.html)
+
 Simple program:
 
 ```c++
@@ -79,11 +85,8 @@ int main()
 }
 ```
 
-## Style Guide
+## FAQ
 
-- [Google C++ styleguide](https://google.github.io/styleguide/cppguide.html)
-- [Modern C++ stylyguide](https://github.com/Microsoft/AirSim/blob/master/docs/coding_guidelines.md)
+### 1. What is the difference between gcc and g++ in Linux?
 
-## Resources
-
-- Udacity C++ course
+`gcc` is used to compile C program while `g++` is used to compile C++ program. Since, a C program can also be compile through g++, because it is the extended or we can say advance compiler for C programming language.
