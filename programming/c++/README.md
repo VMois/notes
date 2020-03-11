@@ -155,6 +155,8 @@ More later...
 
 #### Data hiding
 
+Control of access to class data.
+
 - public, all items denoted are visible for anyone
 - protected, access only from inside of the class **and** inhereted classes
 - private, access only from inside the class
@@ -245,6 +247,127 @@ If we have a dynamic memory management it can introduce **very** dangerous runti
 
 ```c++
 ~Point() {...}  // IMPORTANT! No parameters.
+```
+
+#### Initialization list
+
+Introduction examples:
+
+```c++
+// EX1, two operations, slower
+int a;
+a = 2;
+
+
+// EX2, one operation, faster
+int b = 2;
+
+// Error, will not work
+int& ref;
+ref = b;
+```
+
+Operations during object creation: `memory allocation for object -> constructor call`.
+It corresponds to *EX1*. What if we want to have the same behaviour as for *EX2*? We can use initialization list.
+
+```c++
+class Point {
+    int x,y;
+    public:
+        Point(int nx, int ny): x(nx), y(ny) {};
+        // x = nx, y = nx during creation
+        // you can use x(0), y(0)
+        // IMPORTANT! No operations and calculation can be include, only values
+}
+```
+
+#### Constant classes and methods
+
+```c++
+class A {
+    public:
+        // const int a = 10; Not possible in standard C++
+        /*
+        const int b;
+        A(): b(5) {}  // Not standard, but works on SOME compilers
+        */
+        static const int d;  // OK, 100%
+}
+
+const int A::d = 10;  // OK
+```
+
+Constant methods cannot change the state of the class.
+
+```c++
+class B {
+    int x, y;
+    // mutable int x;  allows change of attribute even in const method
+    public:
+        void f() {x = 10;}  // OK
+        void f1() const  // this keyword is protection for the users
+            { x = 10; }  // Error compiler
+};
+```
+
+#### Static attributes and methods
+
+One instance of static variable for all object of the same class. Shared variable in memory.
+
+Properties:
+
+- shared
+- static attributes exist before objects are initialized
+- static methods exists to access static vars
+
+```c++
+class A {
+    public:
+        int x;
+        static int sx;
+        static void SetSX(int snx)
+            { sx = snx};
+        // ...
+};
+
+int A::sx = 0;  // Init for static var
+
+int main() {
+    A::sx = 30;
+    A::SetSX(50);
+    return 0;
+}
+```
+
+Example of class instances counter:
+
+```c++
+class Smth {
+    static int counter;
+    public:
+        Smth() { counter++; }
+        ~Smth() { counter--; }
+        static getCounter() const {
+            return counter;
+        }
+        // ... some other methods etc.
+}
+```
+
+#### Friend functions and classes
+
+```c++
+class A {
+    int x;
+    char c;
+    public:
+        friend void f(A&);
+};
+
+void f(A& a) {
+    a.x = 108;
+    a.c = 'c';
+}
 ```
 
 ### Dynamic Memory Management
