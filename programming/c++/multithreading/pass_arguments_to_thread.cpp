@@ -1,0 +1,22 @@
+#include <thread>
+#include <iostream>
+
+class DummyClass {
+public:
+    DummyClass()
+    {}
+    DummyClass(const DummyClass & obj)
+    {}
+    void sampleMemberFunction(int x)
+    {
+        std::cout << "Inside sampleMemberFunction " << x <<std::endl;
+    }
+};
+int main() {
+ 
+    DummyClass dummyObj;
+    int x = 10;
+    std::thread threadObj(&DummyClass::sampleMemberFunction, &dummyObj, x);
+    threadObj.join();
+    return 0;
+}
