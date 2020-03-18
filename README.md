@@ -15,6 +15,7 @@ This repo is a collection of notes and learning resources. Nothing more, nothing
 9. [Computer Science](computer_science/)
 10. [Quantum Computing](quantum_computing/)
 11. [Graph theory](graph_theory/)
+12. [Remote work](remote_work/)
 
 ## Contribution
 
