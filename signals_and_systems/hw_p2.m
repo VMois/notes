@@ -49,8 +49,8 @@ integral(h_func, -1*Inf, Inf)
 
 
 % plot impulse response and step funcion function
-t=0:0.01:(-1/la(2));
-size_T = size(t)(2);
+t=0:0.0000001:0.000001;
+size_T = size(t);
 
 tiledlayout(3,1) % Requires R2019b or later
 
@@ -62,14 +62,14 @@ title('Impulse response')
 
 % my way of ploting g(t) function
 % take integral of h(t) from 0 to t for each time point
-S = ones(1, size_T);
-for index = 1:1:size_T
+S = ones(1, size_T(2));
+for index = 1:1:size_T(2)
     S(index) = integral(h_func, 0, t(index));
 end
 
 nexttile
 plot(t, S)
-title('Step response (my way)')
+title('Step response (integral directly)')
 
 % usual calculation of step response
 al = D - K1/la(1) - K2/la(2);
@@ -77,6 +77,6 @@ g = stepfun(t, 0).*(al+(K1/la(1)).*exp(la(1).*t)+(K2/la(2)).*exp(la(2).*t));
 
 nexttile
 plot(t, g)
-title('Step response (normal way)')
+title('Step response (using K1, K2)')
 
 
