@@ -5,7 +5,7 @@ L = 1.5;
 Us = [1; 3/(2*R); -1/R; 0; 0; 0; 0; 0];
 Fi1 = [5; -1/R; 3/(2*R); 1/R; 0; -3/(2*R); 0; 0];
 Fi2 = [-5; 0; 0; 0; 1/(2*R); -1/(2*R); 0; 0];
-Fi3 = [0; 0; -1/(2*R); -1/R; -1/(2*R); 2/R; 1/R; 0];
+Fi3 = [0; 0; -1/(2*R); -1/R; -1/(2*R); 3/R; 1/R; 0];
 It = [0; -1; -5; 0; 5; 0; 0; 0];
 Ilp = [0; 0; 0; (-1*L)/R; 0; L/R; 0; 0];
 I2lp = [0; 0; 0; 0; 0; 0; (2*L)/R; 0];
@@ -14,7 +14,7 @@ I = [0; 0; 0; 0; 0; 0; 0; 1];
 Is = [0; 1; 0; 0; 0; 0; 0; 0];
 I2l = [0; 0; 0; 0; 0; -1; 1; -1];
 
-% calculation of state
+% calculation of SVD
 M = [I2lp, Ilp, I, Fi1, Fi2, Fi3, Us, It];
 N = [-1*I2l, -1*Il, -1*Is];
 
@@ -44,7 +44,7 @@ K2=Ct*L2*B;
 % impulse response h(t) for t >= 0
 h_func = @(t) K1.*exp(la(1).*t)+K2.*exp(la(2).*t);
 
-% check for BIBO (< Inf)
+% manual check for BIBO (result should be < Inf if BIBO)
 integral(h_func, -1*Inf, Inf)
 
 
@@ -60,8 +60,9 @@ nexttile
 plot(t,h)
 title('Impulse response')
 
-% my way of ploting g(t) function
+% my way of ploting g(t) function, just for fun
 % take integral of h(t) from 0 to t for each time point
+% will give the same results as next plot
 S = ones(1, size_T(2));
 for index = 1:1:size_T(2)
     S(index) = integral(h_func, 0, t(index));
@@ -69,9 +70,9 @@ end
 
 nexttile
 plot(t, S)
-title('Step response (integral directly)')
+title('Step response (calculating integral directly)')
 
-% usual calculation of step response
+% calculation of step response function from given example
 al = D - K1/la(1) - K2/la(2);
 g = stepfun(t, 0).*(al+(K1/la(1)).*exp(la(1).*t)+(K2/la(2)).*exp(la(2).*t));
 
