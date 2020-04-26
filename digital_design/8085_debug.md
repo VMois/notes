@@ -1,5 +1,21 @@
 # 3rd HW, Vladyslav Moisieienkov, AJLMUB
 
+Initial content of registers:
+
+| Register | value |
+| -------- |:-----:|
+| A        | 99H   |
+| B        | 88H   |
+| C        | 77H   |
+| D        | 66H   |
+| E        | 55H   |
+| H        | 44H   |
+| L        | 33H   |
+| PC       | 1200H |
+| SP       | 6758H |
+
+All flags from F register are **1**.
+
 ## 1st step
 
 | Address  | Symbol  | Command        | Size    | opcode          |
@@ -43,3 +59,5 @@
 |                | 5/2  | 1204H     | PC           | /RD     | 01H      | incr PC |
 |                | 6/3  | 1205H     | PC           | /RD     | 97H      | incr PC, (HL) = 9701H |
 | INR A          | 7/1  | 1206H     | PC           | /RD     | 3CH      | incr PC, (A) = (A) + 1|
+| PUSH DE        | 8/1  | 1207H     | PC           | /RD     | D5H      | incr PC|
+|                | 9/2  | 96FFH     | SP           | /WR     | 
