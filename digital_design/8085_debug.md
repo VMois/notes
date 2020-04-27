@@ -46,13 +46,17 @@ All flags from F register are **1**.
 | MAS      | 1206H  |
 | VEGE     | 120EH  |
 | S1R      | 120FH  |
-| SR2      | 1214H  |
+| S2R      | 1214H  |
 
 ## 2nd step
 
+- incr PC: (PC) = (PC) + 1
+- incr SP: (SP) = (SP) + 1
+- dcr SP: (SP) = (SP) - 1
+
 | Command        | MC   | Addr. bus | Src of addr. | Direct. | Data bus | note                      |
 |:--------------:|:----:|:---------:|:------------:|:-------:|:--------:|:-------------------------:|
-| LXI SP, STACK  | 1/1  | 1200H     | PC           | /RD     | 31H      | reads opcode, incr PC (n4)|
+| LXI SP, STACK  | 1/1  | 1200H     | PC           | /RD     | 31H      | reads opcode, incr PC |
 |                | 2/2  | 1201H     | PC           | /RD     | 00H      | incr PC                   |
 |                | 3/3  | 1202H     | PC           | /RD     | 97H      | incr PC, (SP) = 9700H     |
 | LXI HL, 9701H  | 4/1  | 1203H     | PC           | /RD     | 21H      | reads opcode, incr PC     |
@@ -104,6 +108,8 @@ Content of registers after the execution:
 | L    | 77H   |
 | PC   | 120FH |
 | SP   | 9700H |
+
+**Note!** register A (Acc) is modified during the execution by a lot of instrucitons. So, value of A was determined by using simulator software for 8085 processor (https://www.sim8085.com).
 
 Content of memory after the execution:
 
