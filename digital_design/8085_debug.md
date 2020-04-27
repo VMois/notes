@@ -75,7 +75,45 @@ All flags from F register are **1**.
 | DCX HL         | 21/1 | 1212H     | PC           | /RD     | 2BH      | incr PC, (HL) = (HL) - 1 = 96FEH |
 | INR M          | 22/1 | 1213H     | PC           | /RD     | 34H      | incr PC, reads opcode |
 |                | 23/2 | 96FEH     | HL           | /RD     | 55H      | 55H + 1 = 56H |
-|                | 24/3 | 96FEH     | HL           | /WR     | 56H      | |
+|                | 24/3 | 96FEH     | HL           | /WR     | 56H      | (96FEH) = 56H |
 | POP HL         | 25/1 | 1214H     | PC           | /RD     | E1H      | incr PC, reads opcode |
 |                | 26/2 | 96FAH     | SP           | /RD     | 77H      | (L) = 77H, incr SP |
-|                | 27/3 | 96FBH     | SP           | /RD     | 88H      | (H) = 88H, incr SP |
+|                | 27/3 | 96FBH     | SP           | /RD     | 88H      | (H) = 88H, incr SP, (SP) = 96FCH |
+| RET            | 28/1 | 1215H     | PC           | /RD     | C9H      | incr PC |
+|                | 29/2 | 96FCH     | SP           | /RD     | 0BH      | (PC, low) = 0BH, incr SP |
+|                | 30/3 | 96FDH     | SP           | /RD     | 12H      | (PC, high) = 12H, incr SP, (SP) = 96FEH |
+| POP BC         | 31/1 | 120BH     | PC           | /RD     | C1H      | incr PC |
+|                | 32/2 | 96FEH     | SP           | /RD     | 55H      | (C) = 56H, incr SP |
+|                | 33/3 | 96FFH     | SP           | /RD     | 66H      | (B) = 66H, incr SP, (SP) = 9700H |
+| NOP            | 34/1 | 120CH     | PC           | /RD     | 00H      | incr PC |
+| NOP            | 35/1 | 120DH     | PC           | /RD     | 00H      | incr PC |
+| HLT            | 36/1 | 120EH     | PC           | /RD     | 76H      | incr PC, CPU is stopped |
+
+## 3rd step
+
+Content of registers after the execution:
+
+| Reg. | value |
+| ---- |:-----:|
+| A    | CDH   |
+| B    | 66H   |
+| C    | 56H   |
+| D    | 66H   |
+| E    | 55H   |
+| H    | 88H   |
+| L    | 77H   |
+| PC   | 120FH |
+| SP   | 9700H |
+
+Content of memory after the execution:
+
+| Addr. | value |
+| ----- |:-----:|
+| 96FAH | 77H   |
+| 96FBH | 88H   |
+| 96FCH | 0BH   |
+| 96FDH | 12H   |
+| 96FEH | 56H   |
+| 96FFH | 66H   |
+
+**End! Thank you**
