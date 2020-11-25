@@ -1,6 +1,13 @@
 # Distributed systems
 
-Notes on distributed systems. [Amazing resource](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/).
+## Resource
+
+- An introduction to distributed systems (https://github.com/aphyr/distsys-class)
+
+- [Notes on distributed systems](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)
+
+
+## My notes
 
 Short notes from [this blog post](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/):
 
