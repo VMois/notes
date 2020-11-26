@@ -1,6 +1,22 @@
 # Distributed systems
 
-## Resource
+## Raft
+
+Useful page: https://raft.github.io
+
+Raft is consensus algorithm, easy to understand, practical. Solves problem of replicated state machine.
+Needs *2*f-1* servers to tolerate failure of **f** servers. 
+
+Leader election is critical for timing because when leader is not present system is frozen.
+
+```
+broadcast time (e.x 0.5ms to 20ms) << electionTimeout (10ms to 200ms) << MTBF (several months)
+```
+
+Raft layer is usually sits underneath application layer (as K/V store). 
+Application layer will interact with Raft. Raft will interact with other Raft layers on different servers.
+
+## Resources
 
 - An introduction to distributed systems (https://github.com/aphyr/distsys-class)
 
