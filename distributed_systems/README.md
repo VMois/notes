@@ -16,6 +16,40 @@ broadcast time (e.x 0.5ms to 20ms) << electionTimeout (10ms to 200ms) << MTBF (s
 Raft layer is usually sits underneath application layer (as K/V store). 
 Application layer will interact with Raft. Raft will interact with other Raft layers on different servers.
 
+Fast-backup of logs for followers is possible by providing additional information for leader such as:
+
+- XTerm, term of conflicting entry
+- XIndex, index of first entry with XTerm
+- XLen, len of follower log
+
+Persistant state:
+
+- log
+- currentTerm
+- votedFor
+
+Sync disk update problem -> speed of write to hard drive is slow (use SSD, DRAM with batteries, etc.)
+
+```
+Linux
+write(fd, ___) -> not guarantee that data there
+fsync(fd) -> ensures that data is on drive, expensive operation
+```
+
+What if logs grows too big?
+
+Snapshot -> saving app state up to certain log index in Raft and removing every log entry before (we have ap state saved).
+Possible that some followers will not be able to catch up due to missing log entries, so, need InstallSnapshotRPC for late followers to be able to catch up.
+
+## From MIT course
+
+Notion of correctness -> Linearizability of history of execution
+
+Execution history is linearizable if:
+
+- exists order of ops that mathes real life for non-concurrent ops
+- each read sess most recent write in order
+
 ## Resources
 
 - An introduction to distributed systems (https://github.com/aphyr/distsys-class)
