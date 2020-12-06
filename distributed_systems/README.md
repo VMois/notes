@@ -41,7 +41,7 @@ What if logs grows too big?
 Snapshot -> saving app state up to certain log index in Raft and removing every log entry before (we have ap state saved).
 Possible that some followers will not be able to catch up due to missing log entries, so, need InstallSnapshotRPC for late followers to be able to catch up.
 
-## From MIT course
+## Linerealizibility
 
 Notion of correctness -> Linearizability of history of execution
 
@@ -50,12 +50,28 @@ Execution history is linearizable if:
 - exists order of ops that mathes real life for non-concurrent ops
 - each read sess most recent write in order
 
+## Zookeeper
+
+Essentially CP (in CAP theorem).
+
+Why ZK?
+
+1. General purpose API -> coordination service
+2. Nx (?) -> Nx performance
+
+ZK guarantees:
+
+- write linearizability with respect to other writes (real-time obey)
+
+- FIFO client order -> write: client-specified order, reads same
+
 ## Resources
 
 - An introduction to distributed systems (https://github.com/aphyr/distsys-class)
 
 - [Notes on distributed systems](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)
 
+- [6.824 MIT course on distributed systems](https://pdos.csail.mit.edu/6.824)
 
 ## My notes
 
