@@ -1,11 +1,13 @@
 # Data Engineering
 
-Table of contents
+## Designing Data Intensive Applications notes
 
-1. [Visualization](visualization/)
-2. [Tools](#tools)
-3. [Resources](#resources)
-4. [Definitions](#definitions)
+Notes from "Designing Data Intensive Applications" book.
+
+Latency is **not equal** response time. *Response time* is what client sees (service delay, network delays, etc.). *Latency* is the duration that a request is waiting to be handled (awaiting service).
+
+Response time is not a single number, it is a distribution. 
+Avarage **is not good** for response time measurment. Usually, mean (50th percentile, p50) or 99th (p99), 99.9th (p999) percentile is better option.
 
 ## Tools
 
@@ -29,9 +31,3 @@ df.memory_usage(index=True).sum() # include indexes and sum result to overall va
 ## Resources
 
 - [Awesome Data Engineering list](https://github.com/igorbarinov/awesome-data-engineering#readme)
-
-## Definitions
-
-- **3V** - Volume, Variety, Velocity
-- **Data lake** - a data lake is a storage repository that holds a vast amount of raw data in its native format until it is needed.
-- **ETL** - Extract, Transform, Load
