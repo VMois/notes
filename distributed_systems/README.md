@@ -41,6 +41,12 @@ What if logs grows too big?
 Snapshot -> saving app state up to certain log index in Raft and removing every log entry before (we have ap state saved).
 Possible that some followers will not be able to catch up due to missing log entries, so, need InstallSnapshotRPC for late followers to be able to catch up.
 
+Some interesting stuff:
+
+- [YugabyteDB Raft performance improvements](https://github.com/YugaByte/yugabyte-db/blob/master/architecture/design/docdb-raft-enhancements.md)
+
+- [YugabyteDB Raft leader lease explained](https://blog.yugabyte.com/low-latency-reads-in-geo-distributed-sql-with-raft-leader-leases/)
+
 ## Linerealizibility
 
 Notion of correctness -> Linearizability of history of execution
