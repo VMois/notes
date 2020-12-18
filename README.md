@@ -7,7 +7,7 @@ This repo is a collection of notes and learning resources. Nothing more, nothing
 1. [Machine learning](machine_learning/)
 2. [Programming](programming/)
 3. [Distributed systems](distributed_systems/)
-4. [Security](security/)
+4. [Computer security](computer_security/)
 5. [SysAdm/DevOps](sysadm/)
 6. [Academic](academic/)
 7. [Data journalism](data_journalism/)
