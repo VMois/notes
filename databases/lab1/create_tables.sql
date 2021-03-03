@@ -1,0 +1,66 @@
+USE Lab1
+
+
+CREATE TABLE School
+(
+    ID INT NOT NULL PRIMARY KEY,
+    Title NVARCHAR(50) NOT NULL,
+    Type NVARCHAR(50) NOT NULL,
+    Capacity INT
+);
+
+CREATE TABLE Driver 
+(
+    ID INT NOT NULL PRIMARY KEY,
+    Name NVARCHAR(50) NOT NULL,
+    Experience INT,
+    PhoneNumber NCHAR(10) NOT NULL
+);
+
+CREATE TABLE Route 
+(
+    ID INT NOT NULL PRIMARY KEY,
+    SchoolID INT FOREIGN KEY REFERENCES School(ID),
+    Financing NVARCHAR(50),
+    Priority INT
+);
+
+CREATE TABLE Address 
+(
+    ID INT NOT NULL PRIMARY KEY,
+    RouteID INT FOREIGN KEY REFERENCES Route(ID),
+    City NVARCHAR(50) NOT NULL,
+    Street NVARCHAR(50) NOT NULL,
+    House INT NOT NULL,
+    PostalCode INT NOT NULL
+);
+
+CREATE TABLE Student
+(
+    ID INT NOT NULL PRIMARY KEY,
+    AddressID INT FOREIGN KEY REFERENCES Address(ID),
+    SchoolID INT FOREIGN KEY REFERENCES School(ID),
+    Name NVARCHAR(50) NOT NULL,
+    DataOfBirth DATE NOT NULL,
+    Scholarship INT NOT NULL
+);
+
+CREATE TABLE Bus
+(
+    ID INT NOT NULL PRIMARY KEY,
+    LicensePlate NCHAR(6) NOT NULL,
+    Manufacturer NVARCHAR(50) NOT NULL,
+    Seats INT NOT NULL,
+    Year INT NOT NULL,
+);
+
+CREATE TABLE DailyDrive 
+(
+    ID INT NOT NULL PRIMARY KEY,
+    BusID INT FOREIGN KEY REFERENCES Bus(ID),
+    DriverID INT FOREIGN KEY REFERENCES Driver(ID),
+    RouteID INT FOREIGN KEY REFERENCES Route(ID),
+    Date DATE NOT NULL
+);
+
+GO
