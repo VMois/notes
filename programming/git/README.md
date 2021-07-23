@@ -1,12 +1,8 @@
 # Git
 
-A version-control system.
+A version control system.
 
-## Useful commands
-
-1. [Undo most recent commit](#undo-commit)
-
-### Undo commit
+## Undo commit
 
 ```bash
 git commit -m "Bad commit"

@@ -1,3 +1,5 @@
 docker run --name mssql -h mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=zaq1@WSX' -v ~/data/ms_sql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 
 docker exec -it mssql "bash"
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "zaq1@WSX"
